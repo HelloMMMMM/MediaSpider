@@ -1,0 +1,1114 @@
+
+2019-03-09 13:10:58
+[ERROR]-[Thread: XNIO-2 task-1]-[com.jfinal.core.ActionHandler.handle()]: /?resourceFrom=BaiDu
+java.lang.RuntimeException: java.lang.NoClassDefFoundError: spider/baiduimagespider/BaiduImageArgsBean
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:96)
+	at com.jfinal.aop.Callback.intercept(Callback.java:96)
+	at cn.jbolt.index.IndexService$$EnhancerByCGLIB$$ce97f523.spiderFromBaiDuImage(<generated>)
+	at cn.jbolt.index.IndexController.index(IndexController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:75)
+	at cn.jbolt.index.IndexInterceptor.intercept(IndexInterceptor.java:23)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:69)
+	at cn.jbolt.common.common.HandleTimeInterceptor.intercept(HandleTimeInterceptor.java:16)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:69)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:69)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:81)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoClassDefFoundError: spider/baiduimagespider/BaiduImageArgsBean
+	at cn.jbolt.index.IndexService.spiderFromBaiDuImage(IndexService.java:23)
+	at cn.jbolt.index.IndexService$$EnhancerByCGLIB$$ce97f523.CGLIB$spiderFromBaiDuImage$0(<generated>)
+	at cn.jbolt.index.IndexService$$EnhancerByCGLIB$$ce97f523$$FastClassByCGLIB$$f785af85.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:84)
+	... 47 more
+Caused by: java.lang.ClassNotFoundException: spider.baiduimagespider.BaiduImageArgsBean
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at com.jfinal.server.undertow.hotswap.HotSwapClassLoader.loadClass(HotSwapClassLoader.java:106)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 52 more
+
+2019-03-09 13:17:51
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 13:17:51
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 13:23:02
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 13:23:02
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 13:24:28
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 13:24:28
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 13:24:35
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 13:24:35
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 13:35:45
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 13:35:45
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 14:00:17
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 14:00:17
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 14:04:51
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 14:04:51
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 14:04:56
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1576ms
+
+2019-03-09 14:05:14
+[INFO]-[Thread: XNIO-2 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:800ms
+
+2019-03-09 14:05:22
+[INFO]-[Thread: XNIO-2 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-09 14:05:24
+[INFO]-[Thread: XNIO-2 task-2]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1009
+响应耗时(ms):1258
+
+2019-03-09 14:05:24
+[INFO]-[Thread: XNIO-2 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:24
+[INFO]-[Thread: XNIO-2 task-3]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):236
+响应耗时(ms):105
+
+2019-03-09 14:05:25
+[INFO]-[Thread: XNIO-2 task-4]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:26
+[INFO]-[Thread: XNIO-2 task-4]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):263
+响应耗时(ms):273
+
+2019-03-09 14:05:26
+[INFO]-[Thread: XNIO-2 task-5]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:26
+[INFO]-[Thread: XNIO-2 task-5]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):239
+响应耗时(ms):267
+
+2019-03-09 14:05:27
+[INFO]-[Thread: XNIO-2 task-6]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:27
+[INFO]-[Thread: XNIO-2 task-6]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):259
+响应耗时(ms):60
+
+2019-03-09 14:05:28
+[INFO]-[Thread: XNIO-2 task-7]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:28
+[INFO]-[Thread: XNIO-2 task-7]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):243
+响应耗时(ms):39
+
+2019-03-09 14:05:29
+[INFO]-[Thread: XNIO-2 task-8]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:29
+[INFO]-[Thread: XNIO-2 task-8]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):259
+响应耗时(ms):81
+
+2019-03-09 14:05:30
+[INFO]-[Thread: XNIO-2 task-9]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:30
+[INFO]-[Thread: XNIO-2 task-9]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):243
+响应耗时(ms):58
+
+2019-03-09 14:05:31
+[INFO]-[Thread: XNIO-2 task-10]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:31
+[INFO]-[Thread: XNIO-2 task-10]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):260
+响应耗时(ms):250
+
+2019-03-09 14:05:32
+[INFO]-[Thread: XNIO-2 task-11]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:32
+[INFO]-[Thread: XNIO-2 task-11]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):234
+响应耗时(ms):57
+
+2019-03-09 14:05:33
+[INFO]-[Thread: XNIO-2 task-12]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:33
+[INFO]-[Thread: XNIO-2 task-12]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):223
+响应耗时(ms):57
+
+2019-03-09 14:05:34
+[INFO]-[Thread: XNIO-2 task-13]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:34
+[INFO]-[Thread: XNIO-2 task-13]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):252
+响应耗时(ms):42
+
+2019-03-09 14:05:35
+[INFO]-[Thread: XNIO-2 task-14]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:35
+[INFO]-[Thread: XNIO-2 task-14]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):260
+响应耗时(ms):277
+
+2019-03-09 14:05:36
+[INFO]-[Thread: XNIO-2 task-15]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:36
+[INFO]-[Thread: XNIO-2 task-15]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):241
+响应耗时(ms):55
+
+2019-03-09 14:05:37
+[INFO]-[Thread: XNIO-2 task-16]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:37
+[INFO]-[Thread: XNIO-2 task-16]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):258
+响应耗时(ms):149
+
+2019-03-09 14:05:38
+[INFO]-[Thread: XNIO-2 task-17]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-09 14:05:38
+[INFO]-[Thread: XNIO-2 task-17]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):400
+响应耗时(ms):88
+
+2019-03-09 14:05:38
+[INFO]-[Thread: XNIO-2 task-18]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:39
+[INFO]-[Thread: XNIO-2 task-18]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):254
+响应耗时(ms):55
+
+2019-03-09 14:05:39
+[INFO]-[Thread: XNIO-2 task-19]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-09 14:05:39
+[INFO]-[Thread: XNIO-2 task-19]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):246
+响应耗时(ms):28
+
+2019-03-09 14:05:40
+[INFO]-[Thread: XNIO-2 task-20]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:40
+[INFO]-[Thread: XNIO-2 task-20]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):279
+响应耗时(ms):49
+
+2019-03-09 14:05:41
+[INFO]-[Thread: XNIO-2 task-21]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:41
+[INFO]-[Thread: XNIO-2 task-21]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):249
+响应耗时(ms):65
+
+2019-03-09 14:05:42
+[INFO]-[Thread: XNIO-2 task-22]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-09 14:05:43
+[INFO]-[Thread: XNIO-2 task-23]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:05:43
+[INFO]-[Thread: XNIO-2 task-22]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):260
+响应耗时(ms):486
+
+2019-03-09 14:05:44
+[INFO]-[Thread: XNIO-2 task-23]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):544
+响应耗时(ms):1333
+
+2019-03-09 14:06:14
+[INFO]-[Thread: XNIO-2 task-24]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:480ms
+
+2019-03-09 14:06:23
+[INFO]-[Thread: XNIO-2 task-25]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:06:44
+[INFO]-[Thread: XNIO-2 task-25]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):21122
+响应耗时(ms):84
+
+2019-03-09 14:06:52
+[INFO]-[Thread: XNIO-2 task-26]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:07:13
+[INFO]-[Thread: XNIO-2 task-26]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):21144
+响应耗时(ms):42
+
+2019-03-09 14:08:29
+[INFO]-[Thread: XNIO-3 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:213ms
+
+2019-03-09 14:08:31
+[INFO]-[Thread: XNIO-3 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:08:32
+[INFO]-[Thread: XNIO-3 task-2]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1069
+响应耗时(ms):86
+
+2019-03-09 14:08:33
+[INFO]-[Thread: XNIO-3 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:08:54
+[INFO]-[Thread: XNIO-3 task-3]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):21123
+响应耗时(ms):146
+
+2019-03-09 14:10:04
+[INFO]-[Thread: XNIO-7 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:218ms
+
+2019-03-09 14:10:09
+[INFO]-[Thread: XNIO-7 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:185ms
+
+2019-03-09 14:10:11
+[INFO]-[Thread: XNIO-7 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-09 14:10:13
+[INFO]-[Thread: XNIO-7 task-3]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1575
+响应耗时(ms):63
+
+2019-03-09 14:10:21
+[INFO]-[Thread: XNIO-7 task-4]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:22
+[INFO]-[Thread: XNIO-7 task-4]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1330
+响应耗时(ms):101
+
+2019-03-09 14:10:24
+[INFO]-[Thread: XNIO-7 task-5]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:25
+[INFO]-[Thread: XNIO-7 task-5]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1297
+响应耗时(ms):28
+
+2019-03-09 14:10:25
+[INFO]-[Thread: XNIO-7 task-6]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:27
+[INFO]-[Thread: XNIO-7 task-6]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1193
+响应耗时(ms):92
+
+2019-03-09 14:10:27
+[INFO]-[Thread: XNIO-7 task-7]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:29
+[INFO]-[Thread: XNIO-7 task-7]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1130
+响应耗时(ms):87
+
+2019-03-09 14:10:29
+[INFO]-[Thread: XNIO-7 task-8]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:30
+[INFO]-[Thread: XNIO-7 task-8]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1098
+响应耗时(ms):26
+
+2019-03-09 14:10:30
+[INFO]-[Thread: XNIO-7 task-9]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:32
+[INFO]-[Thread: XNIO-7 task-9]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1356
+响应耗时(ms):0
+
+2019-03-09 14:10:32
+[INFO]-[Thread: XNIO-7 task-10]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:34
+[INFO]-[Thread: XNIO-7 task-10]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1486
+响应耗时(ms):54
+
+2019-03-09 14:10:34
+[INFO]-[Thread: XNIO-7 task-11]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:36
+[INFO]-[Thread: XNIO-7 task-11]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1469
+响应耗时(ms):45
+
+2019-03-09 14:10:38
+[INFO]-[Thread: XNIO-7 task-12]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:40
+[INFO]-[Thread: XNIO-7 task-12]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1546
+响应耗时(ms):73
+
+2019-03-09 14:10:40
+[INFO]-[Thread: XNIO-7 task-13]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:42
+[INFO]-[Thread: XNIO-7 task-13]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1417
+响应耗时(ms):77
+
+2019-03-09 14:10:42
+[INFO]-[Thread: XNIO-7 task-14]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:44
+[INFO]-[Thread: XNIO-7 task-14]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1492
+响应耗时(ms):17
+
+2019-03-09 14:10:45
+[INFO]-[Thread: XNIO-7 task-15]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:10:46
+[INFO]-[Thread: XNIO-7 task-15]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1235
+响应耗时(ms):50
+
+2019-03-09 14:11:02
+[INFO]-[Thread: XNIO-7 task-16]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:11:03
+[INFO]-[Thread: XNIO-7 task-16]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1275
+响应耗时(ms):100
+
+2019-03-09 14:11:50
+[INFO]-[Thread: XNIO-8 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1882ms
+
+2019-03-09 14:12:12
+[INFO]-[Thread: XNIO-8 task-21]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:16603ms
+
+2019-03-09 14:18:48
+[INFO]-[Thread: XNIO-10 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:823ms
+
+2019-03-09 14:18:50
+[INFO]-[Thread: XNIO-10 task-18]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:18:51
+[INFO]-[Thread: XNIO-10 task-19]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:18:52
+[INFO]-[Thread: XNIO-10 task-18]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1017
+响应耗时(ms):1349
+
+2019-03-09 14:18:52
+[INFO]-[Thread: XNIO-10 task-20]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-09 14:18:53
+[INFO]-[Thread: XNIO-10 task-19]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):695
+响应耗时(ms):634
+
+2019-03-09 14:18:53
+[ERROR]-[Thread: XNIO-10 task-20]-[com.jfinal.core.ActionHandler.handle()]: /download?targetUrl=https://c.wallhere.com/photos/14/82/cat_basket_look_lying_sadness-593801.jpg!d
+com.jfinal.render.RenderException: java.io.IOException: Server returned HTTP response code: 403 for URL: https://c.wallhere.com/photos/14/82/cat_basket_look_lying_sadness-593801.jpg!d
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:65)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:106)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: https://c.wallhere.com/photos/14/82/cat_basket_look_lying_sadness-593801.jpg!d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1890)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1885)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1884)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1457)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:52)
+	... 33 more
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: https://c.wallhere.com/photos/14/82/cat_basket_look_lying_sadness-593801.jpg!d
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1840)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:2943)
+	at java.net.URLConnection.getContentType(URLConnection.java:512)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getContentType(HttpsURLConnectionImpl.java:406)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:50)
+	... 33 more
+
+2019-03-09 14:18:58
+[INFO]-[Thread: XNIO-10 task-21]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:257ms
+
+2019-03-09 14:19:03
+[INFO]-[Thread: XNIO-10 task-22]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:157ms
+
+2019-03-09 14:19:16
+[INFO]-[Thread: XNIO-10 task-23]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:756ms
+
+2019-03-09 14:19:18
+[INFO]-[Thread: XNIO-10 task-24]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:20:01
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 14:20:01
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 14:20:04
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:590ms
+
+2019-03-09 14:20:06
+[INFO]-[Thread: XNIO-1 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-09 14:20:06
+[INFO]-[Thread: XNIO-1 task-2]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):28
+响应耗时(ms):1
+
+2019-03-09 14:20:07
+[INFO]-[Thread: XNIO-1 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:20:07
+[INFO]-[Thread: XNIO-1 task-3]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):324
+响应耗时(ms):169
+
+2019-03-09 14:20:08
+[INFO]-[Thread: XNIO-1 task-4]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:20:08
+[INFO]-[Thread: XNIO-1 task-4]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):285
+响应耗时(ms):25
+
+2019-03-09 14:20:09
+[INFO]-[Thread: XNIO-1 task-5]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:20:09
+[INFO]-[Thread: XNIO-1 task-5]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):187
+响应耗时(ms):265
+
+2019-03-09 14:20:11
+[INFO]-[Thread: XNIO-1 task-6]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:20:11
+[INFO]-[Thread: XNIO-1 task-6]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):118
+响应耗时(ms):36
+
+2019-03-09 14:20:11
+[INFO]-[Thread: XNIO-1 task-7]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:20:12
+[INFO]-[Thread: XNIO-1 task-7]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):143
+响应耗时(ms):100
+
+2019-03-09 14:20:12
+[INFO]-[Thread: XNIO-1 task-8]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-09 14:20:13
+[INFO]-[Thread: XNIO-1 task-8]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):89
+响应耗时(ms):33
+
+2019-03-09 14:20:14
+[INFO]-[Thread: XNIO-1 task-9]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:20:14
+[INFO]-[Thread: XNIO-1 task-9]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):159
+响应耗时(ms):90
+
+2019-03-09 14:20:15
+[INFO]-[Thread: XNIO-1 task-10]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:20:15
+[INFO]-[Thread: XNIO-1 task-10]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):71
+响应耗时(ms):44
+
+2019-03-09 14:22:37
+[INFO]-[Thread: XNIO-1 task-11]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:184ms
+
+2019-03-09 14:22:52
+[INFO]-[Thread: XNIO-1 task-12]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:173ms
+
+2019-03-09 14:24:01
+[INFO]-[Thread: XNIO-1 task-13]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:189ms
+
+2019-03-09 14:25:17
+[INFO]-[Thread: XNIO-1 task-14]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:152ms
+
+2019-03-09 14:26:03
+[INFO]-[Thread: XNIO-1 task-15]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:150ms
+
+2019-03-09 14:26:27
+[INFO]-[Thread: XNIO-1 task-16]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:159ms
+
+2019-03-09 14:26:40
+[INFO]-[Thread: XNIO-1 task-33]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:152ms
+
+2019-03-09 14:27:13
+[INFO]-[Thread: XNIO-1 task-34]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:163ms
+
+2019-03-09 14:27:16
+[INFO]-[Thread: XNIO-1 task-35]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:16
+[INFO]-[Thread: XNIO-1 task-35]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):153
+响应耗时(ms):1
+
+2019-03-09 14:27:17
+[INFO]-[Thread: XNIO-1 task-36]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:17
+[INFO]-[Thread: XNIO-1 task-36]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):174
+响应耗时(ms):104
+
+2019-03-09 14:27:18
+[INFO]-[Thread: XNIO-1 task-37]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:18
+[INFO]-[Thread: XNIO-1 task-37]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):49
+响应耗时(ms):68
+
+2019-03-09 14:27:18
+[INFO]-[Thread: XNIO-1 task-38]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:19
+[INFO]-[Thread: XNIO-1 task-38]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):137
+响应耗时(ms):98
+
+2019-03-09 14:27:19
+[INFO]-[Thread: XNIO-1 task-39]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:19
+[INFO]-[Thread: XNIO-1 task-39]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):111
+响应耗时(ms):27
+
+2019-03-09 14:27:20
+[INFO]-[Thread: XNIO-1 task-40]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:20
+[INFO]-[Thread: XNIO-1 task-40]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):243
+响应耗时(ms):65
+
+2019-03-09 14:27:20
+[INFO]-[Thread: XNIO-1 task-41]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:20
+[INFO]-[Thread: XNIO-1 task-41]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):27
+响应耗时(ms):9
+
+2019-03-09 14:27:21
+[INFO]-[Thread: XNIO-1 task-42]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:21
+[INFO]-[Thread: XNIO-1 task-42]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):26
+响应耗时(ms):23
+
+2019-03-09 14:27:22
+[INFO]-[Thread: XNIO-1 task-43]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:22
+[INFO]-[Thread: XNIO-1 task-43]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):518
+响应耗时(ms):6
+
+2019-03-09 14:27:23
+[INFO]-[Thread: XNIO-1 task-44]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:23
+[INFO]-[Thread: XNIO-1 task-44]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):278
+响应耗时(ms):456
+
+2019-03-09 14:27:24
+[INFO]-[Thread: XNIO-1 task-45]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:25
+[INFO]-[Thread: XNIO-1 task-45]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):548
+响应耗时(ms):1020
+
+2019-03-09 14:27:26
+[INFO]-[Thread: XNIO-1 task-46]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:26
+[INFO]-[Thread: XNIO-1 task-46]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):67
+响应耗时(ms):49
+
+2019-03-09 14:27:27
+[INFO]-[Thread: XNIO-1 task-47]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 14:27:27
+[INFO]-[Thread: XNIO-1 task-47]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):75
+响应耗时(ms):191
+
+2019-03-09 15:10:03
+[INFO]-[Thread: XNIO-1 task-48]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 15:10:03
+[INFO]-[Thread: XNIO-1 task-48]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):765
+响应耗时(ms):47
+
+2019-03-09 15:16:25
+[INFO]-[Thread: XNIO-1 task-54]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:2093ms
+
+2019-03-09 15:18:45
+[INFO]-[Thread: XNIO-1 task-70]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:654ms
+
+2019-03-09 15:20:13
+[INFO]-[Thread: XNIO-1 task-71]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:699ms
+
+2019-03-09 15:20:19
+[INFO]-[Thread: XNIO-1 task-72]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:646ms
+
+2019-03-09 15:21:00
+[INFO]-[Thread: XNIO-1 task-90]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:884ms
+
+2019-03-09 15:21:13
+[INFO]-[Thread: XNIO-1 task-91]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:283ms
+
+2019-03-09 15:21:16
+[INFO]-[Thread: XNIO-1 task-92]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:169ms
+
+2019-03-09 15:22:15
+[INFO]-[Thread: XNIO-1 task-93]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:180ms
+
+2019-03-09 15:22:20
+[INFO]-[Thread: XNIO-1 task-94]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-09 15:22:20
+[INFO]-[Thread: XNIO-1 task-94]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):123
+响应耗时(ms):27
+
+2019-03-09 16:51:22
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 16:51:22
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 16:51:39
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1764ms
+
+2019-03-09 16:51:49
+[INFO]-[Thread: XNIO-1 task-19]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1480ms
+
+2019-03-09 16:54:18
+[INFO]-[Thread: XNIO-1 task-20]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1670ms
+
+2019-03-09 16:57:19
+[INFO]-[Thread: XNIO-1 task-21]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:9247ms
+
+2019-03-09 16:58:21
+[INFO]-[Thread: XNIO-1 task-22]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:9735ms
+
+2019-03-09 16:58:43
+[INFO]-[Thread: XNIO-1 task-23]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2595ms
+
+2019-03-09 17:00:06
+[INFO]-[Thread: XNIO-1 task-24]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:674ms
+
+2019-03-09 17:00:27
+[INFO]-[Thread: XNIO-1 task-25]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:862ms
+
+2019-03-09 17:02:07
+[INFO]-[Thread: XNIO-1 task-26]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2064ms
+
+2019-03-09 17:03:35
+[INFO]-[Thread: XNIO-1 task-27]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:773ms
+
+2019-03-09 17:13:18
+[INFO]-[Thread: XNIO-1 task-28]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1274ms
+
+2019-03-09 17:34:47
+[INFO]-[Thread: XNIO-1 task-29]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2185ms
+
+2019-03-09 17:55:23
+[INFO]-[Thread: XNIO-1 task-46]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:3119ms
+
+2019-03-09 18:14:37
+[INFO]-[Thread: XNIO-1 task-47]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:993ms
+
+2019-03-09 18:16:46
+[INFO]-[Thread: XNIO-1 task-64]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:4837ms
+
+2019-03-09 18:17:27
+[INFO]-[Thread: XNIO-1 task-65]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:685ms
+
+2019-03-09 18:17:33
+[INFO]-[Thread: XNIO-1 task-66]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2925ms
+
+2019-03-09 18:20:07
+[INFO]-[Thread: XNIO-1 task-84]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:684ms
+
+2019-03-09 18:26:40
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 18:26:40
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 18:26:48
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1519ms
+
+2019-03-09 18:26:53
+[INFO]-[Thread: XNIO-1 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:972ms
+
+2019-03-09 18:33:18
+[INFO]-[Thread: XNIO-1 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:827ms
+
+2019-03-09 18:33:40
+[INFO]-[Thread: XNIO-1 task-4]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:846ms
+
+2019-03-09 18:39:54
+[INFO]-[Thread: XNIO-1 task-5]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:11375ms
+
+2019-03-09 18:44:00
+[INFO]-[Thread: XNIO-1 task-6]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:4811ms
+
+2019-03-09 18:44:43
+[INFO]-[Thread: XNIO-1 task-7]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:637ms
+
+2019-03-09 18:47:41
+[INFO]-[Thread: XNIO-1 task-8]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:815ms
+
+2019-03-09 18:47:57
+[INFO]-[Thread: XNIO-1 task-9]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1650ms
+
+2019-03-09 18:48:22
+[INFO]-[Thread: XNIO-1 task-10]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:765ms
+
+2019-03-09 18:49:00
+[INFO]-[Thread: XNIO-1 task-11]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:5003ms
+
+2019-03-09 18:50:38
+[INFO]-[Thread: XNIO-1 task-28]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2073ms
+
+2019-03-09 18:51:00
+[INFO]-[Thread: XNIO-1 task-29]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:957ms
+
+2019-03-09 18:51:19
+[INFO]-[Thread: XNIO-1 task-30]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:4267ms
+
+2019-03-09 18:51:40
+[INFO]-[Thread: XNIO-1 task-31]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:990ms
+
+2019-03-09 18:52:06
+[INFO]-[Thread: XNIO-1 task-32]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:797ms
+
+2019-03-09 18:53:02
+[INFO]-[Thread: XNIO-1 task-33]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2238ms
+
+2019-03-09 18:53:23
+[INFO]-[Thread: XNIO-1 task-34]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:608ms
+
+2019-03-09 18:53:31
+[INFO]-[Thread: XNIO-1 task-35]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:828ms
+
+2019-03-09 18:53:55
+[INFO]-[Thread: XNIO-1 task-36]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1300ms
+
+2019-03-09 18:54:24
+[INFO]-[Thread: XNIO-1 task-37]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1352ms
+
+2019-03-09 18:54:32
+[INFO]-[Thread: XNIO-1 task-38]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:621ms
+
+2019-03-09 18:54:44
+[INFO]-[Thread: XNIO-1 task-39]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1670ms
+
+2019-03-09 18:54:52
+[INFO]-[Thread: XNIO-1 task-40]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:623ms
+
+2019-03-09 18:54:57
+[INFO]-[Thread: XNIO-1 task-41]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:428ms
+
+2019-03-09 18:55:21
+[INFO]-[Thread: XNIO-1 task-58]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:784ms
+
+2019-03-09 18:55:39
+[INFO]-[Thread: XNIO-1 task-60]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:811ms
+
+2019-03-09 19:01:29
+[INFO]-[Thread: XNIO-1 task-61]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2221ms
+
+2019-03-09 19:01:55
+[INFO]-[Thread: XNIO-1 task-62]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2923ms
+
+2019-03-09 19:02:08
+[INFO]-[Thread: XNIO-1 task-63]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:741ms
+
+2019-03-09 19:02:24
+[INFO]-[Thread: XNIO-1 task-64]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1473ms
+
+2019-03-09 19:02:33
+[INFO]-[Thread: XNIO-1 task-65]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:779ms
+
+2019-03-09 19:03:08
+[INFO]-[Thread: XNIO-1 task-66]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2555ms
+
+2019-03-09 19:03:13
+[INFO]-[Thread: XNIO-1 task-67]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1529ms
+
+2019-03-09 19:03:41
+[INFO]-[Thread: XNIO-1 task-85]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:584ms
+
+2019-03-09 19:04:19
+[INFO]-[Thread: XNIO-1 task-86]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1683ms
+
+2019-03-09 19:04:23
+[INFO]-[Thread: XNIO-1 task-87]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:540ms
+
+2019-03-09 19:31:49
+[INFO]-[Thread: XNIO-2 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:970ms
+
+2019-03-09 19:31:56
+[INFO]-[Thread: XNIO-2 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1376ms
+
+2019-03-09 19:45:47
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 19:45:47
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 19:45:58
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1571ms
+
+2019-03-09 19:46:03
+[INFO]-[Thread: XNIO-1 task-18]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:427ms
+
+2019-03-09 19:46:09
+[INFO]-[Thread: XNIO-1 task-19]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1766ms
+
+2019-03-09 19:46:12
+[INFO]-[Thread: XNIO-1 task-20]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:0ms
+
+2019-03-09 19:47:04
+[INFO]-[Thread: XNIO-1 task-21]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:0ms
+
+2019-03-09 19:49:27
+[INFO]-[Thread: XNIO-1 task-22]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:0ms
+
+2019-03-09 19:50:12
+[INFO]-[Thread: XNIO-1 task-23]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:0ms
+
+2019-03-09 19:50:39
+[INFO]-[Thread: XNIO-1 task-24]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:0ms
+
+2019-03-09 19:51:31
+[INFO]-[Thread: XNIO-1 task-25]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:0ms
+
+2019-03-09 19:53:07
+[INFO]-[Thread: XNIO-1 task-26]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:0ms
+
+2019-03-09 19:53:58
+[INFO]-[Thread: XNIO-1 task-27]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:0ms
+
+2019-03-09 19:56:11
+[INFO]-[Thread: XNIO-2 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:2757ms
+
+2019-03-09 19:56:19
+[INFO]-[Thread: XNIO-2 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:280ms
+
+2019-03-09 19:56:22
+[INFO]-[Thread: XNIO-2 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1026ms
+
+2019-03-09 19:56:42
+[ERROR]-[Thread: XNIO-2 task-4]-[com.jfinal.core.ActionHandler.handle()]: /parseVedioUrl?targetUrl=http://a.t6k.co/view_video.php?viewkey=7df218357eeda10e9bc8&page=1&viewtype=basic&category=mr
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at cn.jbolt.index.IndexController.parseVedioUrl(IndexController.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:75)
+	at cn.jbolt.common.common.HandleTimeInterceptor.intercept(HandleTimeInterceptor.java:16)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:69)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:69)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:81)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-03-09 19:57:52
+[INFO]-[Thread: XNIO-3 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1668ms
+
+2019-03-09 19:58:07
+[WARN]-[Thread: XNIO-3 task-2]-[com.jfinal.core.ActionHandler.handleActionException()]: 404 Not Found: /parseVedioUrl?targetUrl=http://a.t6k.co/view_video.php?viewkey=333676872f0393486ca7&page=1&viewtype=basic&category=mr
+
+2019-03-09 21:40:41
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-09 21:40:41
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-09 21:40:45
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1671ms
+
+2019-03-09 21:40:53
+[INFO]-[Thread: XNIO-1 task-18]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:402ms
+
+2019-03-09 21:40:57
+[INFO]-[Thread: XNIO-1 task-19]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:1003ms
+
+2019-03-09 21:41:06
+[INFO]-[Thread: XNIO-1 task-20]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:157ms
+
+2019-03-09 21:41:12
+[INFO]-[Thread: XNIO-1 task-21]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:163ms
+
+2019-03-09 21:41:24
+[INFO]-[Thread: XNIO-1 task-22]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:179ms
+
+2019-03-09 21:41:26
+[INFO]-[Thread: XNIO-1 task-23]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 澶勭悊鏃堕棿:0ms
+
+2019-03-09 21:41:26
+[INFO]-[Thread: XNIO-1 task-23]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+杩炴帴璧勬簮鑰楁椂(ms):282
+鍝嶅簲鑰楁椂(ms):11

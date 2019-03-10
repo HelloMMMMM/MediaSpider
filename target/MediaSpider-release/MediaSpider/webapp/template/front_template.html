@@ -1,0 +1,160 @@
+<!-- 标题  -->
+#define title()
+<h2>
+	<span class="blue">Hello</span><span class="green">M</span>
+</h2>
+#end
+
+<!-- 资源来源列表 -->
+#define resourceSource()
+<div class="social-icons pull-right">
+	<ul>
+		<li><a href="/?resourceFrom=WallHere" class="fa fa-file-image-o"
+			title="WallHere"></a></li>
+		<li><a href="/?resourceFrom=BaiDu" class="fa fa-file-image-o"
+			title="BaiDu"></a></li>
+		<!-- <li><a href="/?resourceFrom=91" class="fa fa-file-video-o"
+			title="91"></a></li> -->
+	</ul>
+</div>
+#end
+
+<!-- 资源来源介绍 -->
+#define resourceIntroduction(resourceSource)
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 text-center">
+		<h2>
+			<span class="blue">#(resourceSource)</span>
+		</h2>
+		<p>我们不生产资源，我们只是资源的搬运工。我们是HelloM，我们负责收集免费网络资源，为广大用户提供快捷便利的获取资源服务，
+			请向您的朋友推荐我们，欢迎您访问HelloM。另外，特殊情况下，请科学上网哦。</p>
+	</div>
+</div>
+#end
+
+<!-- 搜索区域 -->
+#define searchForm(resourceSource)
+<div class="row">
+	<!-- get代表获取数据可防止表单重复提交,post一般意味着修改服务端,会引起表单重复提交 -->
+	<form action="/" method="GET" class="subscribe-form">
+		<fieldset class="col-md-offset-4 col-md-3 col-sm-8">
+			<input type="text" id="subscribe-email" name="keyWord"
+				placeholder="您想瞧什么宝贝呢..." value="#(keyWord)">
+		</fieldset>
+		<fieldset class="col-md-5 col-sm-4">
+			<input type="submit" id="subscribe-submit" class="button white"
+				value="瞧一瞧吧！"> <input type="hidden" name="resourceFrom"
+				value="#(resourceSource)">
+		</fieldset>
+	</form>
+</div>
+#end
+
+<!-- 图片列表 -->
+#define imageList(imgData) #if(imgData&&imgData.size()>0)
+<div class="blog-masonry masonry-true">
+	#for(img : imgData)
+	<div class="post-masonry col-md-4 col-sm-6">
+		<div class="post-thumb">
+			<img src="#(img.getThumbUrl())">
+			<!--  <div class="title-over">
+                                    <h4><a href="#">Title one goes here</a></h4>
+                                </div> -->
+			<a href="/download?targetUrl=#(img.getObjUrl())" title="下载">
+				<div class="post-hover text-center">
+					<div class="inside">
+						<i class="fa fa-lg fa-download"></i>
+						<!-- <span class="date">25 Jan 2084</span> -->
+						<h4>#(img.getTitle())</h4>
+						<p>#(img.getDesc())</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	#end
+</div>
+#end #end
+
+<!-- 视频列表 -->
+#define vedioList(imgData) #if(imgData&&imgData.size()>0)
+<div class="blog-masonry masonry-true">
+	#for(img : imgData)
+	<div class="post-masonry col-md-4 col-sm-6">
+		<div class="post-thumb"">
+			<img src="#(img.getThumbUrl())">
+			<!--  <div class="title-over">
+                                    <h4><a href="#">Title one goes here</a></h4>
+                                </div> -->
+			<a href="/parseVedioUrl?targetUrl=#(img.getObjUrl())" title="播放"">
+				<div class="post-hover text-center">
+					<div class="inside">
+						<i class="fa fa-lg fa-play-circle-o"></i>
+						<!-- <span class="date">25 Jan 2084</span> -->
+						<h4>#(img.getTitle())</h4>
+						<p>#(img.getDesc())</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	#end
+</div>
+#end #end
+
+<!-- 分页 -->
+#define pagination(keyWord,totalPage,resourceSource)
+<div class="pagination">
+	<form class="pageForm" action="/" method="GET">
+		#set(prePage=page-1,nextPage=page+1) #if(totalPage<=1)
+		#set(prePageHref="javascript:void(0);")
+		#set(nextPageHref="javascript:void(0);") #else #set(keyWordString="")
+		#if(keyWord!=null) #set(keyWordString="&keyWord="+keyWord) #end
+		#set(resourceFromString="&resourceFrom="+resourceFrom) #if(page==1)
+		#set(prePageHref="javascript:void(0);")
+		#set(nextPageHref="/?page="+nextPage+keyWordString+resourceFromString)
+		#else if(page==totalPage)
+		#set(prePageHref="/?page="+prePage+keyWordString+resourceFromString)
+		#set(nextPageHref="javascript:void(0);") #else
+		#set(prePageHref="/?page="+prePage+keyWordString+resourceFromString)
+		#set(nextPageHref="/?page="+nextPage+keyWordString+resourceFromString)
+		#end #end <a class="pagePrev pageSkip" href="#(prePageHref)">Previous
+			Page</a> <input id="pageInput" name="page" class="pageInput" type="text"
+			maxlength="5" value="#(page)"
+			oninput="value=value.replace(/[^\d]/g,'')"><span
+			class="totalPageNum">/&nbsp;&nbsp;#(totalPage)</span><a
+			class="pageNext pageSkip" href="#(nextPageHref)">Next Page</a> <input
+			type="hidden" name="keyWord" value="#(keyWord)" /> <input
+			type="hidden" name="totalPage" value="#(totalPage)" /> <input
+			type="hidden" name="resourceFrom" value="#(resourceSource)" />
+		<button class="pageButton" title="Go to chosen page of results">Go</button>
+	</form>
+</div>
+#end
+
+<!-- footer -->
+#define footer()
+<footer class="site-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="social-icons">
+					<ul>
+						<li><a href="#" class="fa fa-facebook"></a></li>
+						<li><a href="#" class="fa fa-twitter"></a></li>
+						<li><a href="#" class="fa fa-weixin"></a></li>
+						<li><a href="#" class="fa fa-qq"></a></li>
+						<li><a href="#" class="fa fa-google-plus"></a></li>
+						<li><a href="#" class="fa fa-git"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<p class="copyright-text">Copyright &copy; 2019 HelloM</p>
+			</div>
+		</div>
+	</div>
+</footer>
+#end

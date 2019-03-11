@@ -52,12 +52,8 @@
 	<div class="main-posts">
 		<div class="container">
 			<div class="row">
-				#if(isVedio)
-					#@vedioList(imgData)
-				#else
-					#@imageList(imgData)
-				#end
-				#@pagination(keyWord,totalPage,resourceFrom)
+				#@dataList(resourcePageBean)
+				#@pagination(keyWord,resourcePageBean.getTotalPage(),resourceFrom)
 			</div>
 		</div>
 	</div>

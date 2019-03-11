@@ -9,8 +9,9 @@ import org.jsoup.select.Elements;
 
 import spider.base.BaseSpider;
 import spider.commonbean.ImageBean;
+import spider.commonbean.ResourcePageBean;
 
-public class NinetyOneSpider extends BaseSpider<List<ImageBean>, NinetyOneArgsBean>{
+public class NinetyOneSpider extends BaseSpider<ResourcePageBean, NinetyOneArgsBean> {
 
 	public NinetyOneSpider(NinetyOneArgsBean args) {
 		super(args);
@@ -26,12 +27,14 @@ public class NinetyOneSpider extends BaseSpider<List<ImageBean>, NinetyOneArgsBe
 	}
 
 	@Override
-	public List<ImageBean> parseData(Document document) {
-		List<ImageBean> imageBeans=new ArrayList<>();
+	public ResourcePageBean parseData(Document document) {
+		ResourcePageBean resourcePageBean = new ResourcePageBean();
+		resourcePageBean.setResourceType(ResourcePageBean.TYPE_VEDIO);
+		List<ImageBean> imageBeans = new ArrayList<>();
 		Elements targetElements = document.getElementsByClass("listchannel");
 		for (Element element : targetElements) {
 			ImageBean imageBean = new ImageBean();
-			//解析一级数据
+			// 解析一级数据
 			Element childElement1 = element.children().first();
 			Element childElement2 = childElement1.getElementsByTag("a").get(0);
 			Element childElement3 = childElement2.getElementsByTag("img").get(0);
@@ -42,7 +45,8 @@ public class NinetyOneSpider extends BaseSpider<List<ImageBean>, NinetyOneArgsBe
 			imageBean.setObjUrl(childElement2.attr("href"));
 			imageBeans.add(imageBean);
 		}
-		return imageBeans;
+		resourcePageBean.setImageBeans(imageBeans);
+		return resourcePageBean;
 	}
 
 }

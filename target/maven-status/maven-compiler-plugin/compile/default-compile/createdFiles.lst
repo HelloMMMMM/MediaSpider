@@ -8,6 +8,7 @@ spider\wallherespider\WallHereSpider.class
 spider\baiduimagespider\baiduimagebean\BaiDuImageJsonBean.class
 spider\commonbean\ImageBean.class
 spider\util\IPUtil.class
+spider\commonbean\ResourcePageBean.class
 spider\baiduimagespider\baiduimagebean\Data.class
 cn\jbolt\common\config\FrontRoutes.class
 spider\commonbean\IPBean.class

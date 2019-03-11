@@ -11,9 +11,10 @@ import spider.baiduimagespider.baiduimagebean.BaiDuImageJsonBean;
 import spider.baiduimagespider.baiduimagebean.Data;
 import spider.base.BaseSpider;
 import spider.commonbean.ImageBean;
+import spider.commonbean.ResourcePageBean;
 import spider.util.DecryptUtil;
 
-public class BaiDuImageSpider extends BaseSpider<List<ImageBean>, BaiduImageArgsBean> {
+public class BaiDuImageSpider extends BaseSpider<ResourcePageBean, BaiduImageArgsBean> {
 
 	public BaiDuImageSpider(BaiduImageArgsBean args) {
 		super(args);
@@ -33,10 +34,12 @@ public class BaiDuImageSpider extends BaseSpider<List<ImageBean>, BaiduImageArgs
 	}
 
 	@Override
-	public List<ImageBean> parseData(Document document) {
+	public ResourcePageBean parseData(Document document) {
+		ResourcePageBean resourcePageBean = new ResourcePageBean();
+		resourcePageBean.setResourceType(ResourcePageBean.TYPE_IMG);
 		List<ImageBean> imageBeans = new ArrayList<>();
 		BaiDuImageJsonBean baiDuImageJsonBean = JSON.parseObject(document.body().text(), BaiDuImageJsonBean.class);
-		ImageBean.totalPage = (int) (baiDuImageJsonBean.getListNum()/50f);
+		resourcePageBean.setTotalPage((int) (baiDuImageJsonBean.getListNum() / 50f));
 		for (Data data : baiDuImageJsonBean.getData()) {
 			ImageBean imageBean = new ImageBean();
 			String thumbUrl = data.getThumbURL();
@@ -49,7 +52,8 @@ public class BaiDuImageSpider extends BaseSpider<List<ImageBean>, BaiduImageArgs
 				imageBeans.add(imageBean);
 			}
 		}
-		return imageBeans;
+		resourcePageBean.setImageBeans(imageBeans);
+		return resourcePageBean;
 	}
 
 }

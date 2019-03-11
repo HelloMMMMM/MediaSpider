@@ -20,7 +20,6 @@ public class IndexInterceptor implements Interceptor {
 			page = totalPage;
 		}
 		controller.set("page", page);
-		controller.set("totalPage", totalPage);
 		//IPUtil.setRandomProxyIP();
 		inv.invoke();
 	}

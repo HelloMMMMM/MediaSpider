@@ -1,9 +1,6 @@
 package spider.commonbean;
 
 public class ImageBean {
-	public static int totalPage;
-	public static boolean isVedio;
-	
 	private String title;
 	private String desc;
 	private String thumbUrl;

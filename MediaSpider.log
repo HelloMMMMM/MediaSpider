@@ -1112,3 +1112,785 @@ java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 [INFO]-[Thread: XNIO-1 task-23]-[cn.jbolt.common.common.UrlFileRender.render()]: 
 连接资源耗时(ms):282
 响应耗时(ms):11
+
+2019-03-11 21:34:50
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-11 21:34:50
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-11 21:34:58
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1959ms
+
+2019-03-11 21:35:05
+[INFO]-[Thread: XNIO-1 task-19]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-11 21:35:06
+[ERROR]-[Thread: XNIO-1 task-19]-[com.jfinal.core.ActionHandler.handle()]: /download?targetUrl=https://get.wallhere.com/photo/e117a2f6399641c801896ad1bafa-1567085.jpg!
+com.jfinal.render.RenderException: java.io.FileNotFoundException: https://get.wallhere.com/photo/e117a2f6399641c801896ad1bafa-1567085.jpg!
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:65)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:106)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: https://get.wallhere.com/photo/e117a2f6399641c801896ad1bafa-1567085.jpg!
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1890)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1885)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1884)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1457)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:52)
+	... 33 more
+Caused by: java.io.FileNotFoundException: https://get.wallhere.com/photo/e117a2f6399641c801896ad1bafa-1567085.jpg!
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1836)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:2943)
+	at java.net.URLConnection.getContentType(URLConnection.java:512)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getContentType(HttpsURLConnectionImpl.java:406)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:50)
+	... 33 more
+
+2019-03-11 21:36:22
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-11 21:36:22
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-11 21:36:29
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:2331ms
+
+2019-03-11 21:36:32
+[INFO]-[Thread: XNIO-1 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-11 21:36:48
+[INFO]-[Thread: XNIO-1 task-2]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1056
+响应耗时(ms):14658
+
+2019-03-11 21:37:27
+[INFO]-[Thread: XNIO-1 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1055ms
+
+2019-03-11 21:38:46
+[INFO]-[Thread: XNIO-1 task-4]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-11 21:38:47
+[ERROR]-[Thread: XNIO-1 task-4]-[com.jfinal.core.ActionHandler.handle()]: /download?targetUrl=https://get.wallhere.com/photo/b034ef617a1ee1836d5af964ee3a-1484527.jpg
+com.jfinal.render.RenderException: java.io.IOException: Server returned HTTP response code: 403 for URL: https://get.wallhere.com/photo/b034ef617a1ee1836d5af964ee3a-1484527.jpg
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:65)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:106)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: https://get.wallhere.com/photo/b034ef617a1ee1836d5af964ee3a-1484527.jpg
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1890)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1885)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1884)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1457)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:52)
+	... 33 more
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: https://get.wallhere.com/photo/b034ef617a1ee1836d5af964ee3a-1484527.jpg
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1840)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:2943)
+	at java.net.URLConnection.getContentType(URLConnection.java:512)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getContentType(HttpsURLConnectionImpl.java:406)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:50)
+	... 33 more
+
+2019-03-11 21:39:59
+[INFO]-[Thread: XNIO-1 task-5]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:40:01
+[INFO]-[Thread: XNIO-1 task-5]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):836
+响应耗时(ms):1422
+
+2019-03-11 21:40:07
+[INFO]-[Thread: XNIO-1 task-6]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:40:10
+[INFO]-[Thread: XNIO-1 task-6]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):734
+响应耗时(ms):1365
+
+2019-03-11 21:40:11
+[INFO]-[Thread: XNIO-1 task-7]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:40:13
+[INFO]-[Thread: XNIO-1 task-7]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):344
+响应耗时(ms):1670
+
+2019-03-11 21:40:17
+[INFO]-[Thread: XNIO-1 task-8]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:40:17
+[INFO]-[Thread: XNIO-1 task-8]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):354
+响应耗时(ms):449
+
+2019-03-11 21:40:51
+[INFO]-[Thread: XNIO-1 task-9]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1171ms
+
+2019-03-11 21:41:53
+[INFO]-[Thread: XNIO-1 task-10]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:41:55
+[INFO]-[Thread: XNIO-1 task-10]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):723
+响应耗时(ms):1289
+
+2019-03-11 21:41:56
+[INFO]-[Thread: XNIO-1 task-11]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:41:57
+[INFO]-[Thread: XNIO-1 task-11]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):363
+响应耗时(ms):155
+
+2019-03-11 21:41:57
+[INFO]-[Thread: XNIO-1 task-12]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:41:58
+[INFO]-[Thread: XNIO-1 task-13]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:42:00
+[INFO]-[Thread: XNIO-1 task-12]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):362
+响应耗时(ms):1985
+
+2019-03-11 21:42:06
+[INFO]-[Thread: XNIO-1 task-13]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1735
+响应耗时(ms):6227
+
+2019-03-11 21:42:07
+[INFO]-[Thread: XNIO-1 task-14]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-11 21:42:08
+[INFO]-[Thread: XNIO-1 task-14]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):360
+响应耗时(ms):677
+
+2019-03-11 21:42:09
+[INFO]-[Thread: XNIO-1 task-15]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:42:09
+[INFO]-[Thread: XNIO-1 task-16]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:42:09
+[INFO]-[Thread: XNIO-1 task-15]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):373
+响应耗时(ms):384
+
+2019-03-11 21:42:10
+[INFO]-[Thread: XNIO-1 task-17]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:42:11
+[INFO]-[Thread: XNIO-1 task-17]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):370
+响应耗时(ms):650
+
+2019-03-11 21:42:12
+[INFO]-[Thread: XNIO-1 task-16]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):746
+响应耗时(ms):1606
+
+2019-03-11 21:42:13
+[INFO]-[Thread: XNIO-1 task-18]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:42:13
+[INFO]-[Thread: XNIO-1 task-19]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-11 21:42:13
+[ERROR]-[Thread: XNIO-1 task-19]-[com.jfinal.core.ActionHandler.handle()]: /download?targetUrl=https://get.wallhere.com/photo/233bb85101b58b84ba56d63d9ac4-1425813.jpg
+com.jfinal.render.RenderException: java.io.IOException: Server returned HTTP response code: 403 for URL: https://get.wallhere.com/photo/233bb85101b58b84ba56d63d9ac4-1425813.jpg
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:65)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:106)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: https://get.wallhere.com/photo/233bb85101b58b84ba56d63d9ac4-1425813.jpg
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1890)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1885)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1884)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1457)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:52)
+	... 33 more
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: https://get.wallhere.com/photo/233bb85101b58b84ba56d63d9ac4-1425813.jpg
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1840)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:2943)
+	at java.net.URLConnection.getContentType(URLConnection.java:512)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getContentType(HttpsURLConnectionImpl.java:406)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:50)
+	... 33 more
+
+2019-03-11 21:42:14
+[INFO]-[Thread: XNIO-1 task-18]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):364
+响应耗时(ms):853
+
+2019-03-11 21:42:14
+[INFO]-[Thread: XNIO-1 task-20]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:42:15
+[INFO]-[Thread: XNIO-1 task-20]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):363
+响应耗时(ms):204
+
+2019-03-11 21:42:15
+[INFO]-[Thread: XNIO-1 task-21]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:42:16
+[INFO]-[Thread: XNIO-1 task-22]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:42:16
+[INFO]-[Thread: XNIO-1 task-21]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):368
+响应耗时(ms):638
+
+2019-03-11 21:42:16
+[INFO]-[Thread: XNIO-1 task-23]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1ms
+
+2019-03-11 21:42:16
+[ERROR]-[Thread: XNIO-1 task-22]-[com.jfinal.core.ActionHandler.handle()]: /download?targetUrl=https://get.wallhere.com/photo/047ec1c909efb833e83911b6cdd8-1427101.jpg
+com.jfinal.render.RenderException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:65)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:106)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:55)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:148)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:504)
+	at org.xnio.nio.NioSocketConduit.write(NioSocketConduit.java:184)
+	at io.undertow.server.protocol.http.HttpResponseConduit.write(HttpResponseConduit.java:647)
+	at io.undertow.conduits.ChunkedStreamSinkConduit.doWrite(ChunkedStreamSinkConduit.java:166)
+	at io.undertow.conduits.ChunkedStreamSinkConduit.write(ChunkedStreamSinkConduit.java:128)
+	at io.undertow.conduits.ChunkedStreamSinkConduit.write(ChunkedStreamSinkConduit.java:219)
+	at org.xnio.conduits.ConduitStreamSinkChannel.write(ConduitStreamSinkChannel.java:158)
+	at io.undertow.channels.DetachableStreamSinkChannel.write(DetachableStreamSinkChannel.java:179)
+	at io.undertow.server.HttpServerExchange$WriteDispatchChannel.write(HttpServerExchange.java:2068)
+	at org.xnio.channels.Channels.writeBlocking(Channels.java:152)
+	at io.undertow.servlet.spec.ServletOutputStreamImpl.writeTooLargeForBuffer(ServletOutputStreamImpl.java:198)
+	at io.undertow.servlet.spec.ServletOutputStreamImpl.write(ServletOutputStreamImpl.java:146)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:57)
+	... 33 more
+
+2019-03-11 21:42:17
+[INFO]-[Thread: XNIO-1 task-24]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:42:17
+[INFO]-[Thread: XNIO-1 task-23]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):377
+响应耗时(ms):644
+
+2019-03-11 21:43:04
+[INFO]-[Thread: XNIO-1 task-24]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):802
+响应耗时(ms):46357
+
+2019-03-11 21:44:42
+[INFO]-[Thread: XNIO-1 task-25]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:44:43
+[ERROR]-[Thread: XNIO-1 task-25]-[com.jfinal.core.ActionHandler.handle()]: /download?targetUrl=https://get.wallhere.com/photo/233bb85101b58b84ba56d63d9ac4-1425813.jpg
+com.jfinal.render.RenderException: java.io.IOException: Server returned HTTP response code: 403 for URL: https://get.wallhere.com/photo/233bb85101b58b84ba56d63d9ac4-1425813.jpg
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:65)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:106)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: https://get.wallhere.com/photo/233bb85101b58b84ba56d63d9ac4-1425813.jpg
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1890)
+	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1885)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1884)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1457)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:52)
+	... 33 more
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: https://get.wallhere.com/photo/233bb85101b58b84ba56d63d9ac4-1425813.jpg
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1840)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at sun.net.www.protocol.http.HttpURLConnection.getHeaderField(HttpURLConnection.java:2943)
+	at java.net.URLConnection.getContentType(URLConnection.java:512)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getContentType(HttpsURLConnectionImpl.java:406)
+	at cn.jbolt.common.common.UrlFileRender.render(UrlFileRender.java:50)
+	... 33 more
+
+2019-03-11 21:45:27
+[INFO]-[Thread: XNIO-1 task-26]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 21:45:30
+[INFO]-[Thread: XNIO-1 task-26]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1557
+响应耗时(ms):1089
+
+2019-03-11 22:04:58
+[INFO]-[Thread: XNIO-21 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1201ms
+
+2019-03-11 22:04:58
+[ERROR]-[Thread: XNIO-21 task-1]-[com.jfinal.core.ActionHandler.handle()]: /?keyWord=%E5%8A%A8%E6%BC%AB&resourceFrom=WallHere
+com.jfinal.template.stat.ParseException: ResourcePageBean
+Template: "/index.html". Line: 55
+	at com.jfinal.template.expr.ast.StaticField.<init>(StaticField.java:43)
+	at com.jfinal.template.expr.ExprParser.staticMember(ExprParser.java:336)
+	at com.jfinal.template.expr.ExprParser.incDec(ExprParser.java:288)
+	at com.jfinal.template.expr.ExprParser.unary(ExprParser.java:280)
+	at com.jfinal.template.expr.ExprParser.nullSafe(ExprParser.java:254)
+	at com.jfinal.template.expr.ExprParser.mulDivMod(ExprParser.java:242)
+	at com.jfinal.template.expr.ExprParser.addSub(ExprParser.java:230)
+	at com.jfinal.template.expr.ExprParser.greaterLess(ExprParser.java:217)
+	at com.jfinal.template.expr.ExprParser.equalNotEqual(ExprParser.java:207)
+	at com.jfinal.template.expr.ExprParser.and(ExprParser.java:192)
+	at com.jfinal.template.expr.ExprParser.or(ExprParser.java:180)
+	at com.jfinal.template.expr.ExprParser.ternary(ExprParser.java:166)
+	at com.jfinal.template.expr.ExprParser.assign(ExprParser.java:159)
+	at com.jfinal.template.expr.ExprParser.expr(ExprParser.java:128)
+	at com.jfinal.template.expr.ExprParser.exprList(ExprParser.java:111)
+	at com.jfinal.template.expr.ExprParser.parse(ExprParser.java:98)
+	at com.jfinal.template.expr.ExprParser.parseExprList(ExprParser.java:77)
+	at com.jfinal.template.stat.Parser.parseExprList(Parser.java:268)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:137)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:86)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:76)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:163)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.render.TemplateRender.render(TemplateRender.java:61)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:106)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: ResourcePageBean
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at com.jfinal.server.undertow.hotswap.HotSwapClassLoader.loadClass(HotSwapClassLoader.java:106)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.jfinal.template.expr.ast.StaticField.<init>(StaticField.java:38)
+	... 56 more
+
+2019-03-11 22:06:54
+[INFO]-[Thread: XNIO-21 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:639ms
+
+2019-03-11 22:07:09
+[INFO]-[Thread: XNIO-21 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:639ms
+
+2019-03-11 22:07:21
+[INFO]-[Thread: XNIO-21 task-4]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:873ms
+
+2019-03-11 22:07:44
+[INFO]-[Thread: XNIO-21 task-5]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:822ms
+
+2019-03-11 22:07:52
+[INFO]-[Thread: XNIO-21 task-6]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:652ms
+
+2019-03-11 22:07:59
+[INFO]-[Thread: XNIO-21 task-7]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 22:08:01
+[INFO]-[Thread: XNIO-21 task-7]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):801
+响应耗时(ms):898
+
+2019-03-11 22:08:02
+[INFO]-[Thread: XNIO-21 task-8]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 22:08:03
+[INFO]-[Thread: XNIO-21 task-8]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):345
+响应耗时(ms):869
+
+2019-03-11 22:08:04
+[INFO]-[Thread: XNIO-21 task-9]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 22:08:05
+[INFO]-[Thread: XNIO-21 task-9]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):420
+响应耗时(ms):258
+
+2019-03-11 22:08:06
+[INFO]-[Thread: XNIO-21 task-10]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 22:08:07
+[INFO]-[Thread: XNIO-21 task-10]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):351
+响应耗时(ms):238
+
+2019-03-11 22:08:46
+[INFO]-[Thread: XNIO-21 task-11]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:490ms
+
+2019-03-11 22:09:00
+[INFO]-[Thread: XNIO-21 task-12]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:168ms
+
+2019-03-11 22:09:19
+[INFO]-[Thread: XNIO-21 task-13]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:161ms
+
+2019-03-11 22:10:31
+[INFO]-[Thread: XNIO-21 task-14]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1177ms
+
+2019-03-11 22:10:44
+[INFO]-[Thread: XNIO-21 task-15]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 22:10:46
+[INFO]-[Thread: XNIO-21 task-15]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):724
+响应耗时(ms):1812
+
+2019-03-11 22:12:13
+[INFO]-[Thread: XNIO-21 task-16]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:2222ms
+
+2019-03-11 22:12:22
+[INFO]-[Thread: XNIO-21 task-17]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 22:12:25
+[INFO]-[Thread: XNIO-21 task-17]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):2537
+响应耗时(ms):970
+
+2019-03-11 22:53:04
+[INFO]-[Thread: XNIO-21 task-18]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1770ms
+
+2019-03-11 22:53:04
+[ERROR]-[Thread: XNIO-21 task-18]-[com.jfinal.core.ActionHandler.handle()]: /?keyWord=%E7%BE%8E%E5%A5%B3&resourceFrom=WallHere
+com.jfinal.template.stat.ParseException: spider.common.ResourcePageBean
+Template: "/template/front_template.html". Line: 65
+	at com.jfinal.template.expr.ast.StaticField.<init>(StaticField.java:43)
+	at com.jfinal.template.expr.ExprParser.staticMember(ExprParser.java:336)
+	at com.jfinal.template.expr.ExprParser.incDec(ExprParser.java:288)
+	at com.jfinal.template.expr.ExprParser.unary(ExprParser.java:280)
+	at com.jfinal.template.expr.ExprParser.nullSafe(ExprParser.java:254)
+	at com.jfinal.template.expr.ExprParser.mulDivMod(ExprParser.java:242)
+	at com.jfinal.template.expr.ExprParser.addSub(ExprParser.java:230)
+	at com.jfinal.template.expr.ExprParser.greaterLess(ExprParser.java:217)
+	at com.jfinal.template.expr.ExprParser.equalNotEqual(ExprParser.java:207)
+	at com.jfinal.template.expr.ExprParser.and(ExprParser.java:192)
+	at com.jfinal.template.expr.ExprParser.or(ExprParser.java:180)
+	at com.jfinal.template.expr.ExprParser.ternary(ExprParser.java:166)
+	at com.jfinal.template.expr.ExprParser.assign(ExprParser.java:159)
+	at com.jfinal.template.expr.ExprParser.expr(ExprParser.java:128)
+	at com.jfinal.template.expr.ExprParser.exprList(ExprParser.java:111)
+	at com.jfinal.template.expr.ExprParser.parse(ExprParser.java:98)
+	at com.jfinal.template.expr.ExprParser.parseExprList(ExprParser.java:77)
+	at com.jfinal.template.stat.Parser.parseExprList(Parser.java:268)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:137)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:86)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:124)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:86)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:136)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:86)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:160)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:86)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:76)
+	at com.jfinal.template.EngineConfig.reloadSharedFunctionSourceList(EngineConfig.java:190)
+	at com.jfinal.template.EngineConfig.getSharedFunction(EngineConfig.java:167)
+	at com.jfinal.template.Env.getFunction(Env.java:86)
+	at com.jfinal.template.stat.ast.Call.exec(Call.java:47)
+	at com.jfinal.template.stat.ast.StatList.exec(StatList.java:68)
+	at com.jfinal.template.Template.render(Template.java:59)
+	at com.jfinal.render.TemplateRender.render(TemplateRender.java:61)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:106)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: spider.common.ResourcePageBean
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at com.jfinal.server.undertow.hotswap.HotSwapClassLoader.loadClass(HotSwapClassLoader.java:106)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.jfinal.template.expr.ast.StaticField.<init>(StaticField.java:38)
+	... 66 more
+
+2019-03-11 22:54:13
+[INFO]-[Thread: XNIO-21 task-19]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:700ms
+
+2019-03-11 22:54:25
+[INFO]-[Thread: XNIO-21 task-20]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1697ms
+
+2019-03-11 22:54:57
+[INFO]-[Thread: XNIO-21 task-21]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:845ms
+
+2019-03-11 22:55:27
+[INFO]-[Thread: XNIO-21 task-22]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:255ms
+
+2019-03-11 22:55:32
+[INFO]-[Thread: XNIO-21 task-23]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 22:55:33
+[INFO]-[Thread: XNIO-21 task-23]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):470
+响应耗时(ms):147
+
+2019-03-11 23:11:40
+[INFO]-[Thread: XNIO-23 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:989ms
+
+2019-03-11 23:11:49
+[INFO]-[Thread: XNIO-23 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:148ms
+
+2019-03-11 23:12:09
+[INFO]-[Thread: XNIO-23 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:168ms
+
+2019-03-11 23:14:00
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-11 23:14:00
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-11 23:14:10
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1619ms
+
+2019-03-11 23:15:48
+[INFO]-[Thread: XNIO-1 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:0ms
+
+2019-03-11 23:15:58
+[INFO]-[Thread: XNIO-1 task-2]-[cn.jbolt.common.common.UrlFileRender.render()]: 
+连接资源耗时(ms):1665
+响应耗时(ms):8216
+
+2019-03-11 23:16:48
+[INFO]-[Thread: XNIO-1 task-3]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:892ms
+
+2019-03-11 23:17:48
+[INFO]-[Thread: XNIO-1 task-4]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:725ms
+
+2019-03-11 23:18:02
+[INFO]-[Thread: XNIO-1 task-5]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:355ms

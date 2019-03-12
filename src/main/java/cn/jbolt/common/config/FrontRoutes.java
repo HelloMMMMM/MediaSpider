@@ -2,6 +2,8 @@ package cn.jbolt.common.config;
 
 import com.jfinal.config.Routes;
 
+import cn.jbolt.index.IndexController;
+
 public class FrontRoutes extends Routes {
 
 	@Override
@@ -12,6 +14,9 @@ public class FrontRoutes extends Routes {
 		//this.addInterceptor(new AdminAuthInterceptor());
 		//针对后台管理系统配置路由+controller
 		//this.add("/admin", AdminIndexController.class,"/index");
+		
+		setBaseViewPath("/");
+		add("/",IndexController.class);
 	}
 
 }

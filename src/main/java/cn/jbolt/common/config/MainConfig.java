@@ -67,15 +67,15 @@ public class MainConfig extends JFinalConfig {
 	public void configRoute(Routes me) {
 		//推荐拆分方式 如果需要就解开注释 创建对应的 Routes
 		//me.add(new AdminRoutes());//配置后台管理系统路由
-		//me.add(new FrontRoutes());//配置网站前台路由
-		//me.add(new ApiRoutes());//配置API访问路由
+		me.add(new FrontRoutes());//配置网站前台路由
+		me.add(new ApiRoutes());//配置API访问路由
 		
 		//me.add(new WechatRoutes());//配置微信端访问路由
 		
 		
 		//普通不拆分的方式配置 如下
 		//设置默认访问首页路由 可使用http://localhost:port 直接访问 如果80端口 port可以省略
-		me.add("/",IndexController.class);
+		//me.add("/",IndexController.class);
 	}
 	// 先加载开发环境配置，再追加生产环境的少量配置覆盖掉开发环境配置
 	static void loadConfig() {

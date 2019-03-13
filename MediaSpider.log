@@ -2235,3 +2235,27 @@ Caused by: java.lang.ClassNotFoundException: spider.common.ResourcePageBean
 
 2019-03-12 16:57:22
 [WARN]-[Thread: XNIO-1 task-19]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /api/getResourcePage
+
+2019-03-13 14:03:26
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-13 14:03:26
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-13 14:03:40
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:2315ms
+
+2019-03-13 14:03:40
+[INFO]-[Thread: XNIO-1 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:1084ms
+
+2019-03-13 14:17:11
+[INFO]-[Thread: main]-[org.xnio.Xnio.<clinit>()]: XNIO version 3.3.8.Final
+
+2019-03-13 14:17:11
+[INFO]-[Thread: main]-[org.xnio.nio.NioXnio.<clinit>()]: XNIO NIO Implementation Version 3.3.8.Final
+
+2019-03-13 14:17:14
+[INFO]-[Thread: XNIO-1 task-1]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:2044ms
+
+2019-03-13 14:17:22
+[INFO]-[Thread: XNIO-1 task-2]-[cn.jbolt.common.common.HandleTimeInterceptor.intercept()]: 处理时间:996ms

@@ -10,6 +10,8 @@ import com.jfinal.core.Controller;
 
 import cn.jbolt.common.common.HandleTimeInterceptor;
 import cn.jbolt.common.common.UrlFileRender;
+import cn.jbolt.interceptor.PageNumInterceptor;
+import cn.jbolt.service.ResourceService;
 import spider.commonbean.ResourcePageBean;
 import spider.util.RequestHeaderUtil;
 
@@ -17,23 +19,17 @@ import spider.util.RequestHeaderUtil;
 public class IndexController extends Controller {
 
 	@Inject
-	private IndexService indexService;
+	private ResourceService resourceService;
 
-	@Before(IndexInterceptor.class)
+	@Before(PageNumInterceptor.class)
 	public void index() {
 		// 获取参数
 		String keyWord = get("keyWord");
 		int page = getAttrForInt("page");
 		String resourceFrom = get("resourceFrom", "WallHere");
 		// 根据参数获取数据,设置相关数据，并渲染
-		ResourcePageBean resourcePageBean = null;
-		if ("WallHere".equals(resourceFrom)) {
-			resourcePageBean = indexService.spiderFromWallHere(keyWord, page);
-		} else if ("BaiDu".equals(resourceFrom)) {
-			resourcePageBean = indexService.spiderFromBaiDuImage(keyWord, page);
-		} else if ("91".equals(resourceFrom)) {
-			resourcePageBean = indexService.spiderFrom91(page);
-		} else {
+		ResourcePageBean resourcePageBean = resourceService.spiderResource(keyWord, page, resourceFrom);
+		if (resourcePageBean == null) {
 			renderError(404);
 			return;
 		}
